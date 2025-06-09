@@ -25,3 +25,18 @@ SHOW VARIABLES LIKE 'ssl%';
 - `ssl_ca`, `ssl_cert`, `ssl_key` 等变量不为空
 - 如果删除了 `.pem` 文件，`mysqld` 应该会在 `datadir` 下重新生成它们
 
+<Giscus
+  repo="tom-vision/blog"
+  repoId="R_kgDOO4eI7w"
+  category="General"
+  categoryId="DIC_kwDOO4eI784CrOOA"
+  mapping="pathname"
+  strict="0"
+  reactionsEnabled="1"
+  emitjMetadata="0"
+  inputPosition="bottom"
+  theme="preferred_color_scheme"
+  lang="zh-CN"
+  crossorigin="anonymous"
+  async>
+</Giscus>
