@@ -4,6 +4,22 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Tom's Blog",
   description: "Excerpts related to technology at work",
+  head: [
+    // [
+    //   'script',
+    //   {},
+    //   `
+    //     var _hmt = _hmt || [];
+    //     (function() {
+    //       var hm = document.createElement("script");
+    //       hm.src = "https://hm.baidu.com/hm.js?";
+    //       var s = document.getElementsByTagName("script")[0]; 
+    //       s.parentNode.insertBefore(hm, s);
+    //     })();
+    //   `
+    // ]
+  ],
+  base: '/blog/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     lastUpdated: true,
