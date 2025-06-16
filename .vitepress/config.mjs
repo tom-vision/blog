@@ -36,12 +36,13 @@ export default defineConfig({
     
     nav: [
       { text: '首页', link: '/' },
-      { text: '开发语言', link: '/todo' },
+      { text: '开发语言', link: '/todo' },// （JavaScript / Node.js / TS / Vue / Midway 等）
       { text: '应用框架', link: '/todo' },
       { text: '数据库', link: '/database/mysql/8/ssl' },
-      { text: '平台架构', link: '/todo' },
+      { text: '平台架构', link: '/todo' }, //（项目搭建 / 服务治理 / 权限流程等）
       { text: '项目总结', link: '/todo' },
-      { text: '工具与工程化', link: '/todo' },
+      { text: '工具与工程化', link: '/tools/waf/ssl' }, //（Git / Vite / Docker / CI 等）
+      { text: '服务器优化', link: '/server/ubuntu/firewall' }, //（Git / Vite / Docker / CI 等）
     ],
 
     sidebar: {
@@ -50,6 +51,22 @@ export default defineConfig({
           text: 'MySQL',
           items: [
             { text: 'V8', link: '/database/mysql/8/ssl' },
+          ]
+        }
+      ],
+      '/server/': [
+        {
+          text: 'Ubuntu',
+          items: [
+            { text: '防火墙', link: '/server/ubuntu/firewall' },
+          ]
+        }
+      ],
+      '/tools/': [
+        {
+          text: 'Waf',
+          items: [
+            { text: 'SSL', link: '/tools/waf/ssl' },
           ]
         }
       ]
