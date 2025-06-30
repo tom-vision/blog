@@ -60,7 +60,13 @@ export default defineConfig({
           items: [
             { text: '防火墙', link: '/server/ubuntu/firewall' },
           ]
-        }
+        },
+        {
+          text: '麒麟',
+          items: [
+            { text: '防火墙', link: '/server/kylin/firewall' },
+          ]
+        },
       ],
       '/tools/': [
         {
