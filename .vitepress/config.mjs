@@ -41,7 +41,7 @@ export default defineConfig({
       { text: '数据库', link: '/database/mysql/8/ssl' },
       { text: '平台架构', link: '/todo' }, //（项目搭建 / 服务治理 / 权限流程等）
       { text: '项目总结', link: '/todo' },
-      { text: '工具与工程化', link: '/tools/waf/ssl' }, //（Git / Vite / Docker / CI 等）
+      { text: '工具与工程化', link: '/tools/todesk/uuid' }, //（Git / Vite / Docker / CI 等）
       { text: '服务器优化', link: '/server/ubuntu/firewall' }, //（Git / Vite / Docker / CI 等）
     ],
 
@@ -67,12 +67,24 @@ export default defineConfig({
             { text: '防火墙', link: '/server/kylin/firewall' },
           ]
         },
-      ],
-      '/tools/': [
         {
           text: 'Waf',
           items: [
-            { text: 'SSL', link: '/tools/waf/ssl' },
+            { text: 'SSL', link: '/server/waf/ssl' },
+          ]
+        },
+        {
+          text: 'Nginx',
+          items: [
+            { text: '日志切割', link: '/server/nginx/logCut' },
+          ]
+        }
+      ],
+      '/tools/': [
+        {
+          text: 'todesk',
+          items: [
+            { text: 'uuid', link: '/tools/todesk/uuid' },
           ]
         }
       ]
