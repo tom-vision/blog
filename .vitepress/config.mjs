@@ -65,6 +65,7 @@ export default defineConfig({
           text: '麒麟',
           items: [
             { text: '防火墙', link: '/server/kylin/firewall' },
+            { text: 'DNS', link: '/server/kylin/dns' },
           ]
         },
         {
