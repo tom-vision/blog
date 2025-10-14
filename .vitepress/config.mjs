@@ -78,6 +78,7 @@ export default defineConfig({
           text: 'Nginx',
           items: [
             { text: '日志切割', link: '/server/nginx/logCut' },
+            { text: '配置备份', link: '/server/nginx/configBackup' },
           ]
         }
       ],
