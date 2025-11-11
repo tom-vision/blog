@@ -39,7 +39,7 @@ export default defineConfig({
       { text: '开发语言', link: '/todo' },// （JavaScript / Node.js / TS / Vue / Midway 等）
       { text: '应用框架', link: '/todo' },
       { text: '数据库', link: '/database/mysql/8/ssl' },
-      { text: '平台架构', link: '/todo' }, //（项目搭建 / 服务治理 / 权限流程等）
+      { text: '平台架构', link: '/architecture/nginx/install' }, //（项目搭建 / 服务治理 / 权限流程等）
       { text: '项目总结', link: '/todo' },
       { text: '工具与工程化', link: '/tools/todesk/uuid' }, //（Git / Vite / Docker / CI 等）
       { text: '服务器优化', link: '/server/ubuntu/firewall' }, //（Git / Vite / Docker / CI 等）
@@ -77,10 +77,25 @@ export default defineConfig({
         {
           text: 'Nginx',
           items: [
-            { text: '日志切割', link: '/server/nginx/logCut' },
-            { text: '配置备份', link: '/server/nginx/configBackup' },
           ]
         }
+      ],
+      '/architecture/': [
+        {
+          text: 'Nginx',
+          items: [
+            { text: '安装', link: '/architecture/nginx/install' },
+            { text: '日志切割', link: '/architecture/nginx/logCut' },
+            { text: '配置备份', link: '/architecture/nginx/configBackup' },
+          ]
+        },
+        {
+          text: 'MySQL',
+          items: [
+            { text: '安装', link: '/architecture/mysql/install' },
+            { text: '备份', link: '/architecture/mysql/backup' },
+          ]
+        },
       ],
       '/tools/': [
         {

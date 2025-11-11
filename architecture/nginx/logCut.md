@@ -11,17 +11,31 @@ vim /usr/local/nginx/sbin/cut_nginx_log.sh
 
 ```bash
 #!/bin/bash
-log_path="/usr/local/nginx/logs"
+set -euo pipefail
+
+log_path="/var/log/nginx"
+pid_file="/run/nginx.pid"
 today=$(date -d "yesterday" +"%Y-%m-%d")
- 
+
 # 切割访问日志
-mv $log_path/access.log $log_path/access_$today.log
- 
+if [ -f "$log_path/access.log" ]; then
+  mv "$log_path/access.log" "$log_path/access_$today.log"
+fi
+
 # 切割错误日志
-mv $log_path/error.log $log_path/error_$today.log
- 
+if [ -f "$log_path/error.log" ]; then
+  mv "$log_path/error.log" "$log_path/error_$today.log"
+fi
+
 # 通知 Nginx 重新生成日志文件
-kill -USR1 $(cat /usr/local/nginx/logs/nginx.pid)
+if [ -f "$pid_file" ]; then
+  kill -USR1 "$(cat "$pid_file")"
+fi
+
+# 清理超过 60 天的历史日志（按修改时间）
+# 先打印将要删除的文件，确认后再执行删除
+find "$log_path" -maxdepth 1 -type f -name 'access_*.log' -mtime +60 -print -delete
+find "$log_path" -maxdepth 1 -type f -name 'error_*.log' -mtime +60 -print -delete
 ```
 
 2. 赋予执行权限：
