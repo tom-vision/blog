@@ -15,7 +15,13 @@ tar -xvf filename.tar.xz
 mv filename /data/mysql
 ```
 
-4. 创建数据目录
+4. 创建用户
+```bash
+groupadd mysql
+useradd -g mysql mysql
+```
+
+5. 创建数据目录
 ```bash
 mkdir /data/mysql/data
 mkdir /data/mysql/log
@@ -24,12 +30,6 @@ touch /data/mysql/log/error.log
 touch /data/mysql/my.cnf
 chown -R mysql.mysql /data/mysql/
 chmod -R 0750 /data/mysql/
-```
-
-5. 创建用户
-```bash
-groupadd mysql
-useradd -g mysql mysql
 ```
 
 6. 初始化
@@ -124,4 +124,9 @@ WantedBy=multi-user.target
 ```bash
 systemctl enable --now mysqld.service
 systemctl is-active mysqld.service
+```
+
+12. 修改初始密码
+```bash
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'L3u$bUe4';
 ```

@@ -26,11 +26,6 @@ enabled=0
 gpgkey=https://nginx.org/keys/nginx_signing.key
 module_hotfixes=true
 EOF
-
-#查看仓库
-yum repolist all
-AI写代码
-shell
 ```
 
 2. 安装nginx
