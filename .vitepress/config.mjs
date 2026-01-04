@@ -36,7 +36,7 @@ export default defineConfig({
     
     nav: [
       { text: '首页', link: '/' },
-      { text: '开发语言', link: '/todo' },// （JavaScript / Node.js / TS / Vue / Midway 等）
+      { text: '开发语言', link: '/code/css/part' },// （JavaScript / Node.js / TS / Vue / Midway 等）
       { text: '应用框架', link: '/todo' },
       { text: '数据库', link: '/database/mysql/8/ssl' },
       { text: '平台架构', link: '/architecture/nginx/install' }, //（项目搭建 / 服务治理 / 权限流程等）
@@ -46,6 +46,14 @@ export default defineConfig({
     ],
 
     sidebar: {
+      '/code/': [
+        {
+          text: '开发语言',
+          items: [
+            { text: 'CSS', link: '/code/css/part' },
+          ]
+        }
+      ],
       '/database/': [
         {
           text: 'MySQL',
